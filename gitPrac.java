@@ -31,7 +31,7 @@ public class gitPrac
 	{
 		for(int i=0; i<arr.length; i++)
 		{
-			for(int j=0; j<arr[0].length; j++)
+			for(int j=1; j<arr[0].length-1; j++)
 				if(arr[i][j]%2==0 && (arr[i][j--]+arr[i][j++])==17)
 					return arr[i][j];
 		}
@@ -40,9 +40,9 @@ public class gitPrac
 
 	public int firstEvenWithSum33(int[][] arr)
 	{
-		for(int i=0; i<arr.length; i++)
+		for(int i=1; i<arr.length-1; i++)
 		{
-			for(int j=0; j<arr[0].length; j++)
+			for(int j=1; j<arr[0].length-1; j++)
 				if(arr[i][j]%2==0 && (arr[i][j--]+arr[i][j++]+arr[i--][j]+arr[i++][j])>=33)
 					return arr[i][j];
 		}
@@ -51,9 +51,9 @@ public class gitPrac
 
 	public int FirstOdd(int[][] arr)
 	{
-		for(int i=0; i<arr.length; i++)
+		for(int i=1; i<arr.length-1; i++)
 		{
-			for(int j=0; j<arr[0].length; j++)
+			for(int j=1; j<arr[0].length-1; j++)
 				if(arr[i][j]%2==1 && (arr[i][j--]+arr[i][j++]+arr[i--][j]+arr[i++][j])>=33)
 					return arr[i][j];
 		}
