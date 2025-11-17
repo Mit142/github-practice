@@ -16,7 +16,7 @@ public class gitPrac
 		}
 	}
 
-	public void FirstEven(int[][] arr)
+	public int firstEven(int[][] arr)
 	{
 		for(int i=0; i<arr.length; i++)
 		{
@@ -24,6 +24,18 @@ public class gitPrac
 				if(arr[i][j]%2==0)
 					return arr[i][j];
 		}
+		return 0;
+	}
+
+	public int firstEvenWithSum17(int[][] arr)
+	{
+		for(int i=0; i<arr.length; i++)
+		{
+			for(int j=0; j<arr[0].length; j++)
+				if(arr[i][j]%2==0 && (arr[i][j--]+arr[i][j++])==17)
+					return arr[i][j];
+		}
+		return 0;
 	}
 
 }
