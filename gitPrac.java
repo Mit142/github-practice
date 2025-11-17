@@ -38,4 +38,25 @@ public class gitPrac
 		return 0;
 	}
 
+	public int firstEvenWithSum33(int[][] arr)
+	{
+		for(int i=0; i<arr.length; i++)
+		{
+			for(int j=0; j<arr[0].length; j++)
+				if(arr[i][j]%2==0 && (arr[i][j--]+arr[i][j++]+arr[i--][j]+arr[i++][j])>=33)
+					return arr[i][j];
+		}
+		return 0;
+	}
+
+	public int FirstOdd(int[][] arr)
+	{
+		for(int i=0; i<arr.length; i++)
+		{
+			for(int j=0; j<arr[0].length; j++)
+				if(arr[i][j]%2==1 && (arr[i][j--]+arr[i][j++]+arr[i--][j]+arr[i++][j])>=33)
+					return arr[i][j];
+		}
+		return 0;
+	}
 }
